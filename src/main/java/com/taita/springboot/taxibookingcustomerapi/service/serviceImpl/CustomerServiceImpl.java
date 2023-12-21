@@ -58,6 +58,9 @@ public class CustomerServiceImpl implements CustomerService {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Please enter current longitude");
             }else {
                 Customer customerDetails = customerRepository.findByMobile1(customerRequestDTO.getMobile());
+                if(customerDetails != null){
+                    return ResponseEntity.status(HttpStatus.OK).body("Account already exist!");
+                }
                 if (customerDetails == null){
                     //register
                     Customer customer = new Customer();

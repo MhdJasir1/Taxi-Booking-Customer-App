@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface CustomerNotificationService {
-    public void saveNotification(CustomerNotificationDTO customerNotificationDTO);
+    void saveNotification(CustomerNotificationDTO customerNotificationDTO);
 
     ResponseEntity<?> getCustomerNotification(VerificationCodeDTO customerNotificationDTO);
 

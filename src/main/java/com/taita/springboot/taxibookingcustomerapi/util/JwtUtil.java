@@ -12,8 +12,8 @@ import java.util.Date;
 
 @Component
 public class JwtUtil {
-    private static String secret = "kzxm0Ng3+u943X8ntHQu4+vPXJbCEek9JSuQRnIxn6fGigSFsWVrXsF5bvVXDD70zlnhqBlH5WeWef+7tJ75qNCN3dMtOnCXP/+ThhT0Orw=";
-    private static long expiryDuration = 60 * 60;
+    private static final String secret = "kzxm0Ng3+u943X8ntHQu4+vPXJbCEek9JSuQRnIxn6fGigSFsWVrXsF5bvVXDD70zlnhqBlH5WeWef+7tJ75qNCN3dMtOnCXP/+ThhT0Orw=";
+    private static final long expiryDuration = 60 * 60;
 
     public String generateAccessToken(Customer customer){
         long milliTime = System.currentTimeMillis();

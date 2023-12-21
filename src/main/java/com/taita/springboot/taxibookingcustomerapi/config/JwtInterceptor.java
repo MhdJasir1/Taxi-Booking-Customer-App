@@ -17,7 +17,7 @@ public class JwtInterceptor implements HandlerInterceptor {
     @Autowired
     private JwtUtil jwtUtil;
 
-    private RequestMetaDTO requestMetaDTO;
+    private final RequestMetaDTO requestMetaDTO;
 
     public JwtInterceptor(RequestMetaDTO requestMetaDTO){
         this.requestMetaDTO = requestMetaDTO;
@@ -33,7 +33,6 @@ public class JwtInterceptor implements HandlerInterceptor {
             requestMetaDTO.setCustomerId(Integer.parseInt(claims.getIssuer()));
             requestMetaDTO.setUsername(claims.get("username").toString());
             requestMetaDTO.setMobile(claims.get("mobile").toString());
-//            requestMetaDTO.setEmail(claims.get("email").toString());
         }
 
         return HandlerInterceptor.super.preHandle(request, response, handler);

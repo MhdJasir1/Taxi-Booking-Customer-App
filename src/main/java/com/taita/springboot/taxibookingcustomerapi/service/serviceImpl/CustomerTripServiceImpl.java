@@ -244,7 +244,7 @@ public class CustomerTripServiceImpl implements CustomerTripService {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Please enter comment!");
         } else {
             RiderRating riderRating = new RiderRating();
-            riderRating.setCustomerTripId(requestMetaDTO.getCustomerId());
+            riderRating.setCustomerTripId(tripId);
             riderRating.setDate(String.valueOf(LocalDate.now()));
             riderRating.setTime(String.valueOf(LocalTime.now()));
             riderRating.setStarRate(rateRiderDTO.getStarRate());
@@ -272,7 +272,7 @@ public class CustomerTripServiceImpl implements CustomerTripService {
         } else {
             if (customerTripHistoryDTO.getDate().equals("")) {
                 //date selected
-                List<CustomerTrip> todayTrips = customerTripRepository.findAllByCustomerIdAndTripDate(requestMetaDTO.getCustomerId(), String.valueOf(customerTripHistoryDTO.getDate()));
+                List<CustomerTrip> todayTrips = customerTripRepository.findAllByCustomerIdAndTripDate(requestMetaDTO.getCustomerId(), customerTripHistoryDTO.getDate());
                 return ResponseEntity.status(HttpStatus.OK).body(todayTrips);
             } else {
                 //date not selected
