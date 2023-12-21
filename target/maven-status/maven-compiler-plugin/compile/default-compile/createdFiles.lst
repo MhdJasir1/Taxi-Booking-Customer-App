@@ -12,6 +12,7 @@ com\taita\springboot\taxibookingcustomerapi\controller\customer\CustomerControll
 com\taita\springboot\taxibookingcustomerapi\dto\CustomerProfileUpdateDTO.class
 com\taita\springboot\taxibookingcustomerapi\controller\customer\HomeController.class
 com\taita\springboot\taxibookingcustomerapi\repository\CustomerNotificationRepository.class
+com\taita\springboot\taxibookingcustomerapi\controller\IndexController.class
 com\taita\springboot\taxibookingcustomerapi\repository\CustomerMessageRepository.class
 com\taita\springboot\taxibookingcustomerapi\dto\RateRiderDTO.class
 com\taita\springboot\taxibookingcustomerapi\entity\RiderRating.class
