@@ -11,7 +11,7 @@
 	<groupId>com.taita.springboot</groupId>
 	<artifactId>TaxiBookingCustomerAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>TaxiBookingCustomerAPI</name>
 	<description>TaxiBookingCustomerAPI</description>
 	<properties>
